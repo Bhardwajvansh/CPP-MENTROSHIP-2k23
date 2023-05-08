@@ -305,28 +305,27 @@
 
 // soln 14
 
-// RCB  vansh
+// RCB  vansh    
 // BCR  ahnsv
 
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
  
-int main(){
-    string s;
-    cin>>s;
-    int n=s.length();
-    for(int i=0;i<n;i++){
-        for(int j=1;j<n;j++){
-            if(s[j-1]>s[j]){
-                char temp=s[j-1];
-                s.insert(j,to_string(temp));
-                s.insert(j-1,to_string(s[j]));
-            }
-        }
-    }
-    cout<<s<<endl;
-    return 0;
-}
+// int main(){
+//     string s;
+//     cin>>s;
+//     int arr[26]={0};                 // class
+//     for(int i=0;i<s.length();i++){   // {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,}
+//         arr[s[i]-'a']+=1;
+//     }
+//     for(int i=0;i<26;i++){           // i=3 arr[3]=0
+//         while(arr[i]!=0){
+//             cout<<char('a'+i);       // output -> aclss
+//             arr[i]--;
+//         }
+//     }
+//     return 0;
+// }
 
 // #include<bits/stdc++.h>
 // using namespace std;
@@ -336,5 +335,115 @@ int main(){
 //     cin>>s;
 //     sort(s.begin(),s.end());
 //     cout<<s;
+//     return 0;
+// }
+
+
+// Question set 2
+
+// soln 1
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int main(){
+//     string s;
+//     cin>>s;
+//     int len=s.length();                 // aavansh
+//     bool check=false;                   // i=2  s[i]=v
+//     for(int i=0;i<len;i++){             // j=6  s[j]=h
+//         for(int j=0;j<len;j++){
+//             if(i!=j && s[i]==s[j]) break;
+//             if(j==len-1) check=true;
+//         }
+//         if(check){
+//             cout<<s[i];
+//             break;
+//         }
+//     }   
+//     return 0;
+// }
+
+
+// sol 2
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int main(){
+//     string s;
+//     cin>>s;
+//     int arr[26]={0};                  // 0 index -> a , 1 index -> b.... 25 index -> z
+//     for(int i=0;i<s.length();i++){    //   rrrccb
+//         arr[ s[i]-'a' ]+=1;           // {0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,}
+//     }                                 //  arr['r'-'a'] + = 1 => arr[17]+=1
+//     int mx=-1;
+//     int index=0;
+//     for(int i=0;i<26;i++){
+//         if(arr[i]>mx){
+//             mx=arr[i];                //  mx=3
+//             index=i;                  //  index=17
+//         }
+//     }
+//     cout<<char('a'+index)<<endl;      // 'a'+14 => 97 + 17 = 114
+//     return 0;
+// }
+
+
+// sol 3
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// string fun(string s){
+//     s=s+s[0];        // RCB + Z = RCBZ
+//     s.erase(0,1);
+//     return s;
+// }
+
+// int main(){                //  RCB   CBR   BRC   RCB
+//     string s1,s2;          //  RCB   CBR
+//     cin>>s1>>s2;
+//     int len=s1.length();
+//     for(int i=0;i<len;i++){    
+//         s2=fun(s2);
+//         if(s1==s2){ 
+//             cout<<"TRUE"; 
+//             break;
+//         }
+//     }
+//     return 0;
+// }
+
+
+// soln 4
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int main(){
+//     string s1,s2;
+//     cin>>s1>>s2;
+//     int arr1[26]={0},arr2[26]={0};
+//     if(s1.length()==s2.length()){
+//         for(int i=0;i<s1.length();i++){
+//             arr1[s1[i]-'a']+=1;
+//             arr2[s2[i]-'a']+=1;
+//         }
+//         bool check=false;
+//         for(int i=0;i<26;i++){
+//             if(arr1[i]!=arr2[i]){
+//                 check=true;
+//                 break;
+//             }
+//         }
+//         if(check) cout<<"FALSE\n";
+//         else cout<<"TRUE\n";
+//     }
+//     else{
+//         cout<<"FALSE hello"<<endl;
+
+//     }
 //     return 0;
 // }
