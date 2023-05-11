@@ -200,10 +200,10 @@
 //         cin>>arr[i];
 //     }  
 //     for(int i=0;i<n;i++){                // {1,1,1,2,2}
-//         int cnt=0;                       // i= 0  j->0-4 
-//         for(int j=0;j<n;j++){
+//         int cnt=0;                       // i= 0 cnt=0 j= 0,1,2,3,4
+//         for(int j=0;j<n;j++){            // arr[4]=2  arr[4]=2    cnt=2
 //             if(arr[i]==arr[j]) cnt+=1;
-//         }        
+//         }                                // {0,1,1,0,0,0,0,0,............,0} 
 //         if(check[arr[i]]==false)cout<<"the element "<<arr[i]<<" is present "<<cnt<<" number of times\n";
 //         check[arr[i]]=true; 
 //     }
@@ -350,8 +350,8 @@
 //     string s;
 //     cin>>s;
 //     int len=s.length();                 // aavansh
-//     bool check=false;                   // i=2  s[i]=v
-//     for(int i=0;i<len;i++){             // j=6  s[j]=h
+//     bool check=false;                   // i=2  s[i]=a
+//     for(int i=0;i<len;i++){             // j=0->6  s[j]=a
 //         for(int j=0;j<len;j++){
 //             if(i!=j && s[i]==s[j]) break;
 //             if(j==len-1) check=true;
@@ -396,15 +396,15 @@
 // #include<bits/stdc++.h>
 // using namespace std;
 
-// string fun(string s){
-//     s=s+s[0];        // RCB + Z = RCBZ
-//     s.erase(0,1);
+// string fun(string s){ // s=RCB     s=CBR
+//     s=s+s[0];        //  s=RCBR    s=CBRC
+//     s.erase(0,1);    //  s=CBR     s=BRC
 //     return s;
 // }
 
 // int main(){                //  RCB   CBR   BRC   RCB
 //     string s1,s2;          //  RCB   CBR
-//     cin>>s1>>s2;
+//     cin>>s1>>s2;     
 //     int len=s1.length();
 //     for(int i=0;i<len;i++){    
 //         s2=fun(s2);
