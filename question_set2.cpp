@@ -1,6 +1,6 @@
-//1) Write a c++ program to calculate the power of a number using recursion like power(int number, int power) like power(2, 3) should return 8?
+// 1) Write a c++ program to calculate the power of a number using recursion like power(int number, int power) like power(2, 3) should return 8?
 
-// 2)Write a program to reverse String in Java using Recursion.
+// 2)Write a program to reverse String in c++ using Recursion.
 
 // 3)How to calculate the sum of digits using recursion in c++?
 
@@ -90,3 +90,122 @@
 //     }
 //     return 0;
 // }
+
+
+// soln 1
+
+// return (n)*factor(n-1)
+// return (n)*power(p-1)
+// if(p==0) return 1;
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int power(int n,int p){
+//     if(p==0) return 1;
+//     return n*power(n,p-1);
+// }
+
+// int main(){
+//     int n,p;
+//     cin>>n>>p;
+//     cout<<power(n,p);   
+//     return 0;
+// }
+
+// n=2 p=3
+
+// power(2,3) return 2*4=8;
+// power(2,2) return 2*2=4;
+// power(2,1) return 2*1=2;
+// power(2,0) return 1
+
+
+// soln 2
+
+// s="RCB" ... s=""
+// if(len==0) return "";
+// return rev(s.substr(1,len-1),len-1)+s[0];
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// string rev(string s,int len){
+//     if(len==0) return "";
+//     return rev(s.substr(1,len-1),len-1)+s[0];
+// }
+
+// int main(){
+//     string s;
+//     cin>>s;
+//     cout<<rev(s,s.length());
+//     return 0;
+// }
+
+// s="RCB" len=3
+// rev("RCB",3) return "BC"+'R'=>"BCR";
+// rev("CB",2) return "B"+'C'=>"BC";
+// rev("B",1) return ""+'B'=>"B"; 
+// rev("",0) return "";
+
+
+// soln 3
+
+// 123 => 1+2+3=>6                    123%10=> 3  123/10=12
+// if(n==0) return 0;
+// return n%10+digsum(n/10);
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int digsum(int n){
+//     if(n==0) return 0;
+//     return n%10 + digsum(n/10);
+// }
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     cout<<digsum(n);
+//     return 0;
+// }
+
+// n=123
+// digsum(123) return 3 + 3 = 6;
+// digsum(12) return 2 + 1 = 3;
+// digsum(1) return 1 + 0 = 1;
+// digsum(0) return 0;
+
+
+
+// soln 4
+
+// n=3 3 -> C rod
+
+// the only step to focus here is
+// n-1 discs -> A -> B
+// nth -> A -> C
+// n-1 dics -> B -> C
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// void tower(int n,char frm,char to ,char help){
+//     if(n==0) return;
+//     tower(n-1,frm,help,to);
+//     cout<<"move the disc "<<n<<" from "<<frm<<" to "<<to<<endl;
+//     tower(n-1,help,to,frm);
+// }
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     tower(n,'A','C','B');
+//     return 0;
+// }
+
+// n=3
+
+// tower(3,A,C,B) tower(2,A,B,C) => "move the disc 2 from A to B"  => 2nd  
+//                tower(1,A,C,B) => "move the disc 1 from A to C"  => 1st   tower(1,C,B,A) => "move the disc 1 from C to B"
+//                tower(0,A,B,C) return 
