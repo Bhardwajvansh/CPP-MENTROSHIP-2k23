@@ -1,1 +1,3 @@
-    m1[0]=10000;
+ temp.push(1);
+    temp.push(2);
+    temp.push(3);

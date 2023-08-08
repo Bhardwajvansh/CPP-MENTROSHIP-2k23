@@ -193,3 +193,100 @@
 
 //     return 0;
 // }
+
+
+
+
+//Stacks 
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int main(){
+//     stack<int> s;
+//     if(s.empty()){
+//         cout<<"empty stackn\n";
+//     }
+//     else{
+//         cout<<"not an empty stack\n";
+//     }
+
+//     s.push(10); // enter new elemnts at the top on the stack
+//     s.push(20);
+//     s.push(30);
+//     s.push(40);
+//     s.push(50);
+
+
+//     stack<int> temp;
+//     temp.push(1);
+//     temp.push(2);
+//     temp.push(3);
+
+//     temp.swap(s);
+
+//     while(!s.empty()){
+//         cout<<s.top()<<" ";
+//         s.pop();
+//     }
+
+//     // s.pop(); // is used to delete the topmost element of the stack
+
+//     // cout<<s   <<endl;   // top() returns the current top elemnt of the stack
+
+
+//     // cout<<s.size()<<endl;
+
+//     return 0;
+// }
+
+
+
+
+// Queue
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+    queue<int> q;
+
+    q.push(10);
+    q.push(20);
+    q.push(30);
+    q.push(40);
+    q.push(50);
+
+    queue<int> temp;
+    temp.push(1);
+    temp.push(2);
+    temp.push(3);
+
+    temp.swap(q);
+
+
+    while(!temp.empty()){
+        cout<<temp.front()<<" ";
+        temp.pop();
+    }
+    cout<<endl;
+    while(!q.empty()){
+        cout<<q.front()<<" ";
+        q.pop();
+    }
+
+
+    // q.pop();
+
+    // cout<<q.front()<<endl;
+
+    // cout<<q.back()<<endl;
+
+    // cout<<q.size()<<endl;
+
+    // if(q.empty()) cout<<"empty queue\n";
+    // else cout<<"not an empty queue\n";
+
+    return 0;
+}
