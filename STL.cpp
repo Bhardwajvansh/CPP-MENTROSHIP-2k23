@@ -197,7 +197,7 @@
 
 
 
-//Stacks 
+// Stacks 
 
 
 // #include<bits/stdc++.h>
@@ -246,47 +246,146 @@
 
 // Queue
 
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
  
-int main(){
-    queue<int> q;
+// int main(){
+//     queue<int> q;
 
-    q.push(10);
-    q.push(20);
-    q.push(30);
-    q.push(40);
-    q.push(50);
+//     q.push(10);
+//     q.push(20);
+//     q.push(30);
+//     q.push(40);
+//     q.push(50);
 
-    queue<int> temp;
-    temp.push(1);
-    temp.push(2);
-    temp.push(3);
+//     queue<int> temp;
+//     temp.push(1);
+//     temp.push(2);
+//     temp.push(3);
 
-    temp.swap(q);
-
-
-    while(!temp.empty()){
-        cout<<temp.front()<<" ";
-        temp.pop();
-    }
-    cout<<endl;
-    while(!q.empty()){
-        cout<<q.front()<<" ";
-        q.pop();
-    }
+//     temp.swap(q);
 
 
-    // q.pop();
+//     while(!temp.empty()){
+//         cout<<temp.front()<<" ";
+//         temp.pop();
+//     }
+//     cout<<endl;
+//     while(!q.empty()){
+//         cout<<q.front()<<" ";
+//         q.pop();
+//     }
 
-    // cout<<q.front()<<endl;
 
-    // cout<<q.back()<<endl;
+//     // q.pop();
 
-    // cout<<q.size()<<endl;
+//     // cout<<q.front()<<endl;
 
-    // if(q.empty()) cout<<"empty queue\n";
-    // else cout<<"not an empty queue\n";
+//     // cout<<q.back()<<endl;
 
-    return 0;
-}
+//     // cout<<q.size()<<endl;
+
+//     // if(q.empty()) cout<<"empty queue\n";
+//     // else cout<<"not an empty queue\n";
+
+//     return 0;
+// }
+
+
+
+
+
+// linked list
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int main(){
+//     list<int> l1;  // 0->1->3->2
+//     l1.push_back(1);
+//     l1.push_back(3);
+//     l1.push_back(2);
+
+//     l1.push_front(0);
+
+//     l1.pop_front();
+//     l1.pop_back();
+
+//     l1.insert(l1.end(),100);
+
+//     l1.reverse();
+
+//     // for(auto i:l1) cout<<i<<endl;
+
+//     if(l1.empty()){
+//         cout<<"empty list\n";
+//     }
+//     else{
+//         cout<<"not an empty list\n";
+//     }
+
+
+//     // cout<<l1.size()<<endl;
+
+//     // sort(l1.begin(),l1.end());
+
+    
+//     // cout<<l1.front()<<endl;
+//     // cout<<l1.back()<<endl;
+
+//     // cout<<*l1.begin()<<endl;
+//     // cout<<*l1.end()<<endl;
+//     return 0;
+// }
+
+
+
+// unordered map
+
+// #include<bits/stdc++.h>
+// using namespace std;
+ 
+// int main(){
+//     unordered_map<int,int> um1;
+//     unordered_map<int,string> um2;
+//     unordered_map<string,string> um3;
+
+//     um1[0]=10;
+//     um1[1]=11;
+//     um1[2]=12;
+//     um1[2]=200;
+
+//     cout<<um1[2]<<endl;    
+
+//     // cout<<um1.size()<<endl;
+
+//     // if(um1.find(1)!=um1.end()){
+//     //     cout<<"element present\n";
+//     // }
+//     // else cout<<"element not present\n";
+
+//     // if(um1.empty()) cout<<"empty map\n";
+//     // else cout<<"not an empty map\n";
+
+//     // for(auto i:um1){
+//     //     cout<<i.first<<" "<<i.second<<endl;
+//     // }
+//     return 0;
+// }
+
+
+
+// DSA -> C,C++,JAVA -> LEETCODE/GFG -> REAL LIFE USES
+// OOPS -> C++,JAVA -> CONCEPTS
+// RDBMS/SQL
+// OS
+// PROJECTS -> know everything
+// ANSWERS MUST CONVINCE THEN/CONVEY THAT HOW YOU ARE USEFUL/PROFITABLE FOR THEM
+
+
+// 1st round -> Technical Round
+// 2nd round -> Professional Fitment
+// 3rd round -> HR Round
+
+// intro -> your name, college name, dpt name, place i belong, my intrest (eg: sft dev), College experiences.(3 - 4 min).
